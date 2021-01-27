@@ -1,0 +1,5 @@
+.DS_Store
+.git
+.history
+*/.git/*
+/node_modules

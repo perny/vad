@@ -1,0 +1,27 @@
+#!/usr/bin/env node
+
+//console.log('H5 Scaffold cli...')
+const program = require("commander")
+const open = require('open')
+
+
+program
+  .version(require('../package.json').version)
+  .usage('<command> [options]')
+program.command('init <project-name>')
+  .description("初始化项目")
+  .action(require('../lib/init'))
+program.command('install')
+  .description("安装依赖")
+  .action(require('../lib/install'))
+program.command('run')
+  .description("运行项目")
+  .action(require('../lib/run'))
+
+/* program.command('open')
+  .description('预览项目')
+  .action(() => {
+    //打开浏览器
+    open('http://localhost:8080')
+  }) */
+program.parse(process.argv)

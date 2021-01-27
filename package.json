@@ -1,0 +1,32 @@
+{
+  "name": "vad-cli",
+  "version": "1.0.0",
+  "description": "html5 marketing scaffold, on the basis of the VUE",
+  "bin": {
+    "vad": "./bin/vad"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "clear": "^0.1.0",
+    "commander": "^6.2.0",
+    "consolidate": "^0.14.0",
+    "download-git-repo": "^3.0.2",
+    "figlet": "^1.5.0",
+    "handlebars": "^4.7.6",
+    "inquirer": "^7.3.3",
+    "open": "^7.3.0",
+    "ora": "^5.1.0",
+    "shelljs": "^0.8.4"
+  },
+  "devDependencies": {
+    "metalsmith": "^2.3.0",
+    "minimatch": "^3.0.4",
+    "user-home": "^2.0.0",
+    "validate-npm-package-name": "^3.0.0"
+  }
+}
