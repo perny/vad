@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "html5 marketing scaffold, on the basis of the VUE",
   "bin": {
-    "vad": "./bin/vad"
+    "vad": "bin/vad"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -28,5 +28,17 @@
     "minimatch": "^3.0.4",
     "user-home": "^2.0.0",
     "validate-npm-package-name": "^3.0.0"
-  }
+  },
+  "main": "",
+  "directories": {
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/perny/vad.git"
+  },
+  "bugs": {
+    "url": "https://github.com/perny/vad/issues"
+  },
+  "homepage": "https://github.com/perny/vad#readme"
 }
