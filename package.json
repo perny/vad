@@ -1,6 +1,6 @@
 {
   "name": "vad-cli",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "html5 marketing scaffold, on the basis of the VUE",
   "bin": {
     "vad": "bin/vad"
@@ -22,14 +22,13 @@
     "inquirer": "^7.3.3",
     "open": "^7.3.0",
     "ora": "^5.1.0",
-    "shelljs": "^0.8.4"
-  },
-  "devDependencies": {
+    "shelljs": "^0.8.4",
     "metalsmith": "^2.3.0",
     "minimatch": "^3.0.4",
     "user-home": "^2.0.0",
     "validate-npm-package-name": "^3.0.0"
   },
+  "devDependencies": {},
   "main": "",
   "directories": {
     "lib": "lib"

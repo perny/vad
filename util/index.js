@@ -21,25 +21,34 @@ const clone = async function (repo, desc) {
 
 
 
-const syncSpawn = async (...args) => {
-  const options = args[args.length - 1]
+const syncSpawn = async (cmd, args, options) => {
   if (process.platform === 'win32') {
-    console.log('win32')
+    //console.log('win32')
 
     // options.cmd = options.cwd
     // delete options.cwd
     // 设置 shell 选项为 true 以隐式地调用 cmd 
     options.shell = true
   } else {
-    console.log('Linux/Unix')
+    //console.log('Linux/Unix')
   }
 
   return new Promise(resolve => {
-    log('args', ...args)
-    const proc = spawn(...args)
-    proc.stdout.pipe(process.stdout)
-    proc.stderr.pipe(process.stderr)
-    proc.on('close', () => {
+    //子进程流
+    const proc = spawn(
+      cmd,
+      args,
+      Object.assign(
+        {
+          cwd: process.cwd(),
+          stdio: 'inherit',
+          shell: true,
+        },
+        options
+      )
+    )
+
+    proc.on('exit', () => {
       resolve()
     })
   })

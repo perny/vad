@@ -11,10 +11,10 @@ program
 program.command('init <project-name>')
   .description("初始化项目")
   .action(require('../lib/init'))
-program.command('install')
+program.command('install <project-name>')
   .description("安装依赖")
   .action(require('../lib/install'))
-program.command('run')
+program.command('run <project-name>')
   .description("运行项目")
   .action(require('../lib/run'))
 
